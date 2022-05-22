@@ -23,7 +23,7 @@ export default function SendEmail(props) {
         <label for="to">To:<input onChange={(e)=>setTo(e.target.value)} type='email' name='to' /></label>
         <label for="from">From:<input onChange={(e)=>setFrom(e.target.value)} type='email' name='from' /></label>
         <label for="subject">Subject:<input onChange={(e)=>setSubject(e.target.value)} type='text' name='subject' /></label>
-        <label for="message">Message:<input onChange={(e)=>setMessage(e.target.value)} type='text' name='message' /></label>
+        <label for="message">Message:<input onChange={(e)=>setMessage(e.target.value)} type='textarea' name='message' /></label>
         <button onClick={()=>{props.sendAddaEmail(to , from ,subject , message)}}>Send</button>
         </div>
       </div>

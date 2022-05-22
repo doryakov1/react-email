@@ -24,8 +24,8 @@ export default function Inbox(props) {
     }
     const sliceMessage = (text) => {
         if(text == undefined) return;
-        if (text.length > 55) {
-            return text.slice(0, 55) + '...';
+        if (text.length > 60) {
+            return text.slice(0, 60) + '...';
         } else {
             return text;
         }
