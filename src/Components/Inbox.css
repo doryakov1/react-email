@@ -1,0 +1,90 @@
+.link {
+    text-decoration: none;
+
+}
+
+.inbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 3px;
+    padding: 3px;
+    font-size: calc(7px + 2vh);
+    width: 98%;
+}
+
+
+.inbox .email {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 3px;
+  padding: 3px;
+  width: 100%;
+  height: calc(115px + 2vh);
+  border-top: 1px solid darkgrey;
+  word-break: break-all;
+}
+.inbox .header-email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 3px;
+    padding: 3px;
+}
+
+.inbox .header-email .email-date {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: calc(350px + 2vh);
+    margin: 3px;
+    padding: 3px;
+    font-size: calc(7px + 2vh);
+    color: darkgray;
+}
+
+.inbox .header-email .email-from {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: calc(350px + 2vh);
+    margin: 3px;
+    padding: 3px;
+    font-size: calc(8px + 2vh);
+    color: rgba(0, 0, 0, 0.829);
+    font-weight: bold;
+}
+
+.inbox .buttom-email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 3px;
+    padding: 3px;
+}
+
+.inbox .buttom-email .email-title{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: calc(350px + 2vh);
+    margin: 3px;
+    padding: 3px;
+    font-size: calc(8px + 2vh);
+    color: rgba(0, 0, 0, 0.74);
+}
+
+.inbox .buttom-email .email-body{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: calc(600px + 2vh);
+    margin: 3px;
+    padding: 3px;
+    font-size: calc(7px + 2vh);
+    color: darkgrey;
+}

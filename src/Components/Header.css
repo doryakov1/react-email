@@ -1,0 +1,21 @@
+.Header input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    /* height: calc(50px + 2vh); */
+    font-size: calc(7px + 2vh);
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    background: whitesmoke;
+}
+
+.Header input::placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    padding: 2px;
+}
