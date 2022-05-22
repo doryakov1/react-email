@@ -12,7 +12,7 @@ export default function SendEmail(props) {
     <div className='send-email'>
       <input id='checkbox-button' onClick={()=>{
         if(sendChar == '➕'){
-          setSendChar('🗙');
+          setSendChar('❌');
         }else{
           setSendChar('➕');
         }
