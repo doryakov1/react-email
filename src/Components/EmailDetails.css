@@ -11,6 +11,15 @@
     /* min-height: 100vh; */
     font-size: calc(9px + 2vh);
 }
+.email-details .link{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    color: rgba(0, 0, 0, 0.763);
+}
 
 .email-details .email-header{
     display: flex;

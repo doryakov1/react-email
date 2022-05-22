@@ -88,7 +88,7 @@
 
 .inbox .buttom-email .email-body{
     display: flex;
-    justify-content: right;
+    justify-content: left;
     align-items: center;
     width: calc(550px + 2vh);
     margin: 0;

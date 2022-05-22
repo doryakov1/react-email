@@ -1,10 +1,12 @@
 import React from 'react';
 import './EmailDetails.css';
+import { Link } from 'react-router-dom';
 
 export default function EmailDetails(props) {
   console.log(props)
   return (
     <div className='email-details'>
+      <Link className='link' to='/react-email'><span>Back</span></Link>
       <div className='email-header'>
        <span className='email-date'>{props.date}</span>
        <div className='email-header-to-from'>

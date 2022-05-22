@@ -14,6 +14,7 @@
     font-size: calc(7px + 2vh);
     border: none;
     border-radius: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .send-email .send-email-button {
@@ -42,11 +43,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgba(245, 245, 245, 0.687);
     width: 100%;
+    min-height: 100vh;
     height: 100%;
     bottom: -5000px;
     left: -5000px;
-    z-index: 999;
+    /* z-index: 999; */
 }
 
 .send-email .send-email-form-postion .send-email-form{
@@ -54,13 +57,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 15px;
-    padding: 15px;
-    width: 80%;
+    /* margin: 15px;
+    padding: 15px; */
+    /* width: calc(250px + 2vh); */
     /* height: 100%; */
-    min-height: 60vh;
-    background: whitesmoke;
+    /* min-height: 60vh; */
+    /* background: whitesmoke; */
     font-size: calc(6px + 2vh);
+    background: rgb(255, 255, 255);
+    border-radius: 50px;
     z-index: 999;
 }
 
@@ -73,7 +78,7 @@
     width: 60%;
     height: 20px;
     border: none;
-    background: white;
+    background: whitesmoke;
     font-size: calc(6px + 2vh);
 }
 
@@ -116,6 +121,6 @@
 
 .send-email #checkbox-button:checked~.send-email-form-postion{
     transition: 0.4s;
-    bottom: 340px;
+    bottom: -10px;
     left: -20px;
 }

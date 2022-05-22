@@ -38,7 +38,8 @@ export default function Inbox(props) {
                         <div className='header-email'><span className='email-date'>{email.date}</span>
                             <span className='email-from'>{sliceFrom(email.to)}</span></div>
                         {/* <span className='email-from'>{sliceFrom(email.from)}</span> */}
-                        <div className='buttom-email'><span className='email-title'>{sliceSubject(email.subject)}</span>
+                        <div className='buttom-email'>
+                            {/* <span className='email-title'>{sliceSubject(email.subject)}</span> */}
                             <span className='email-body'>{sliceMessage(email.message)}</span></div>
                     </div></Link>)
             })}
