@@ -78,7 +78,7 @@
 
 .inbox .buttom-email .email-title{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     width: calc(225px + 2vh);
     margin: 0;
@@ -89,7 +89,7 @@
 
 .inbox .buttom-email .email-body{
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
     width: calc(550px + 2vh);
     margin: 0;

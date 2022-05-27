@@ -33,7 +33,7 @@ function App() {
   }
 
   const sendAddEmail = (to, from, subject, message) => {
-    setEmailAlert('Sending...');
+    setEmailAlert(<div className="loading">Loading&#8230;</div>);
 
     // console.log(from, to, subject, message)
     $.ajax({
