@@ -54,7 +54,7 @@ function App() {
           setShowComp(!showComp);
           setTimeout(() => {
             setShowComp(showComp);
-          }, '0')
+          }, '500')
           let email = {
             date: getCreatedAt(),
             from: from,
@@ -81,11 +81,11 @@ function App() {
           }
 
         }
-        else if(data.success == false) {
+        else {
           setEmailAlert('Email could not be sent');
         }
       },
-      error:  (xhr, type) =>{
+      error:  (xhr, type) => {
         setEmailAlert('Email could not be sent')
       }
     })
