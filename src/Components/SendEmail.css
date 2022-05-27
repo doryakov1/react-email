@@ -17,6 +17,29 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.send-email h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px;
+    width: 70%;
+    font-size: calc(10px + 2vh);
+ }
+
+ .send-email .email-alert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 196, 0);
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px;
+    width: 75%;
+    font-size: calc(5px + 2vh);
+ }
+
 .send-email .send-email-button {
     display: flex;
     justify-content: center;
@@ -75,12 +98,28 @@
     align-items: center;
     margin: 10px;
     padding: 10px;
-    width: 60%;
+    width: 70%;
     height: 20px;
     border: none;
     background: whitesmoke;
     font-size: calc(6px + 2vh);
 }
+
+.send-email .send-email-form textarea{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    width: 70%;
+    resize: none;
+    /* height: 20px; */
+    border: none;
+    background: whitesmoke;
+    font-size: calc(6px + 2vh);
+}
+
+ 
 
 .send-email .send-email-form button{
     display: flex;
@@ -90,7 +129,7 @@
     padding: 10px;
     border: none;
     box-shadow: 1px 1px 1px 1px white;
-    width: 20%;
+    width: 70%;
     background: steelblue;
     color: white;
     font-size: calc(6px + 2vh);

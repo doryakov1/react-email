@@ -7,7 +7,7 @@ export default function SendEmail(props) {
   const [subject ,setSubject] = useState('');
   const [message ,setMessage] = useState('');
   const [sendChar,setSendChar] = useState('➕')
-
+  
   return (
     <div className='send-email'>
       <input id='checkbox-button' onClick={()=>{
@@ -20,10 +20,11 @@ export default function SendEmail(props) {
       <div className='send-email-form-postion'>
         <div className='send-email-form'>
         <h1>New message</h1>
-        <label for="to">To:<input onChange={(e)=>setTo(e.target.value)} type='email' name='to' /></label>
-        <label for="from">From:<input onChange={(e)=>setFrom(e.target.value)} type='email' name='from' /></label>
-        <label for="subject">Subject:<input onChange={(e)=>setSubject(e.target.value)} type='text' name='subject' /></label>
-        <label for="message">Message:<input onChange={(e)=>setMessage(e.target.value)} type='textarea' name='message' /></label>
+        <span className='email-alert'>{props.emailAlert}</span>
+       <input onChange={(e)=>setTo(e.target.value)} type='email' name='to' placeholder='To' />
+      <input onChange={(e)=>setFrom(e.target.value)} type='email' name='from' placeholder='From' />
+        <input onChange={(e)=>setSubject(e.target.value)} type='text' name='subject' placeholder='Subject' />
+        <textarea onChange={(e)=>setMessage(e.target.value)} rows='4' cols='14' placeholder='Message' />
         <button onClick={()=>{props.sendAddaEmail(to , from ,subject , message)}}>Send</button>
         </div>
       </div>
