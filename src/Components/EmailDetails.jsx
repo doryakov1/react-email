@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import './EmailDetails.css';
 import { Link } from 'react-router-dom';
+import validator from 'validator';
 
 export default function EmailDetails(props) {
   // const [to ,setTo] = useState('');
-  const [from, setFrom] = useState(props.from);
-  const [subject, setSubject] = useState(props.subject);
-  const [message, setMessage] = useState(props.message);
+  const [from, setFrom] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const formvalid = () => {
+    if (validator.isEmail(from)) {
+      props.sendAddaEmail(props.to, from, subject, message);
+    }
+  }
   return (
     <div className='email-details'>
       <Link className='link' to='/react-email'><span>🔙</span></Link>
@@ -16,7 +22,7 @@ export default function EmailDetails(props) {
         <input onChange={(e) => setFrom(e.target.value)} type='email' name='from' placeholder='From' />
         <input onChange={(e) => setSubject(e.target.value)} type='text' name='subject' placeholder='Subject' />
       <textarea onChange={(e) => setMessage(e.target.value)}  rows='50' cols='21' name='message' placeholder='Message' />
-        <button onClick={() => { props.sendAddaEmail(props.to, from, subject, message) }}>Send</button>
+        <button onClick={formvalid}>Send</button>
       </div>
       {props.emailHistory.map((email) => {
         return <div className='email'>
