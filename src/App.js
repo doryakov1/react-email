@@ -48,7 +48,8 @@ function App() {
       dataType: 'jsonp',
       context: $('body'),
       success: function (data) {
-        if (data.success) {
+
+        if (data.success == true) {
           setEmailAlert('');
           setShowComp(!showComp);
           setTimeout(() => {
