@@ -14,7 +14,7 @@
     font-size: calc(7px + 2vh);
     border: none;
     border-radius: 5px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
 }
 
 .send-email h1{

@@ -47,8 +47,8 @@ function App() {
       },
       dataType: 'jsonp',
       context: $('body'),
-      success: function (data) {
-       console.log(data.success)
+      success:  (data) =>{
+      //  console.log(data.success)
         if (data.success == true) {
           setEmailAlert('');
           setShowComp(!showComp);
@@ -85,7 +85,7 @@ function App() {
           setEmailAlert('Email could not be sent');
         }
       },
-      error: function (xhr, type) {
+      error:  (xhr, type) =>{
         setEmailAlert('Email could not be sent')
       }
     })
