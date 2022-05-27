@@ -156,7 +156,7 @@
     margin: 0;
     padding: 0;
     /* width: 100%; */
-    height: calc(500px + 2vh);
+    height: calc(175px + 2vh);
     border-top: 1px solid black;
     /* word-break: break-all; */
 }
