@@ -1,4 +1,4 @@
-.email-details{
+.email-details {
     /* display: flex;
     justify-content: center;
     align-items: center;
@@ -10,17 +10,19 @@
     /* min-height: 100vh; */
     font-size: calc(9px + 2vh);
 }
-.email-details .link{
+
+.email-details .link {
     display: flex;
     justify-content: left;
     align-items: center;
     text-decoration: none;
     padding: 5px;
     margin: 5px;
+    font-size: calc(15px + 2vh);
     color: rgba(0, 0, 0, 0.763);
 }
 
-.email-details .email-header{
+.email-details .email-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,7 +31,7 @@
     font-size: calc(9px + 2vh);
 }
 
-.email-details .email-header .email-date{
+.email-details .email-header .email-date {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,7 +45,7 @@
     font-weight: bold;
 }
 
-.email-details .email-header .email-header-to-from{
+.email-details .email-header .email-header-to-from {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,27 +59,27 @@
     /* font-weight: bold; */
 }
 
-.email-details .email-title{
+.email-details .email-title {
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
     padding: 10px;
     margin: 10px;
     font-size: calc(9px + 2vh);
     font-weight: bold;
 }
 
-.email-details .email-body{
+.email-details .email-body {
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
     padding: 15px;
     margin: 15px;
     font-size: calc(9px + 2vh);
     color: rgba(0, 0, 0, 0.715);
 }
 
-.email-details .send-email-form{
+.email-details .send-email-form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,7 +89,7 @@
     border-radius: 50px;
 }
 
-.email-details .send-email-form h1{
+.email-details .send-email-form h1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +98,7 @@
     word-break: break-all;
 }
 
-.email-details .send-email-form input{
+.email-details .send-email-form input {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -109,37 +111,42 @@
     font-size: calc(8px + 2vh);
 }
 
-.email-details .send-email-form textarea{
+.email-details .send-email-form textarea {
     display: flex;
     justify-content: left;
     align-items: center;
     margin: 10px;
     padding: 10px;
-     height: 100px;
-     width: 75%;
-     border: none;
+    height: 100px;
+    width: 75%;
+    border: none;
     resize: none;
     background: whitesmoke;
     font-size: calc(8px + 2vh);
 }
-.email-details .send-email-form .to{
+
+.email-details .send-email-form .to {
     margin-left: 46px;
     font-size: calc(8px + 2vh);
     font-weight: bold;
 }
 
-.email-details .send-email-form button{
+.email-details .send-email-form button {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 75%;
-    margin: 10px;
-    padding: 10px;
+    margin: 15px;
+    padding: 15px;
     color: lawngreen;
     font-weight: bold;
     background: none;
     font-size: calc(4px + 2vh);
     cursor: pointer;
+}
+
+.email-details .send-email-form button:hover {
+    color: steelblue;
 }
 
 .email-details .email {
@@ -149,72 +156,76 @@
     margin: 0;
     padding: 0;
     /* width: 100%; */
-    height: calc(250px + 2vh);
+    height: calc(500px + 2vh);
     border-top: 1px solid black;
     /* word-break: break-all; */
-  }
-  
-  
-  .email-details .header-email {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: row;
-      margin: 0;
-      padding: 0;
-  }
-  
-  .email-details .header-email .email-date {
-      display: flex;
-      justify-content: left;
-      align-items: center;
-      width: calc(180px + 2vh);
-      margin: 0;
-      padding: 0;
-      font-size: calc(6px + 2vh);
-      color: rgb(100, 100, 100);
-  }
- 
-  
-  .email-details .header-email .email-from {
-      display: flex;
-      justify-content: right;
-      align-items: center;
-      width: calc(225px + 2vh);
-      margin: 0 5px 0 0;
-      padding: 0;
-      font-size: calc(7px + 2vh);
-      color: rgba(0, 0, 0, 0.829);
-      font-weight: bold;
-  }
-  
-  .email-details .buttom-email {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: row;
-      margin: 0;
-      padding: 0;
-  }
-  
-  .email-details .buttom-email .email-title{
-      display: flex;
-      justify-content: left;
-      align-items: center;
-      width: calc(225px + 2vh);
-      margin: 0;
-      padding: 0;
-      font-size: calc(5px + 2vh);
-      color: black;
-  }
-  
-  .email-details .buttom-email .email-body{
-      display: flex;
-      justify-content: right;
-      align-items: center;
-      width: calc(550px + 2vh);
-      margin: 0 5px 0 0;
-      padding: 0;
-      font-size: calc(5px + 2vh);
-      color: rgb(56, 56, 56);
-  }
+}
+
+
+.email-details .header-email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.email-details .header-email .email-date {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: calc(180px + 2vh);
+    margin: 0;
+    padding: 0;
+    font-size: calc(5px + 2vh);
+    color: rgb(100, 100, 100);
+    
+}
+
+
+.email-details .header-email .email-from {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: calc(225px + 2vh);
+    margin: 0;
+    padding: 0;
+    font-size: calc(5px + 2vh);
+    color: rgba(0, 0, 0, 0.829);
+    font-weight: bold;
+    word-break: break-all;
+}
+
+.email-details .buttom-email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.email-details .buttom-email .email-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: calc(225px + 2vh);
+    margin: 0;
+    padding: 0;
+    font-size: calc(4px + 2vh);
+    color: black;
+    word-break: break-all;
+}
+
+.email-details .buttom-email .email-body {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: calc(550px + 2vh);
+    margin: 0;
+    padding: 0;
+    font-size: calc(4px + 2vh);
+    color: rgb(56, 56, 56);
+    word-break: break-all;
+}

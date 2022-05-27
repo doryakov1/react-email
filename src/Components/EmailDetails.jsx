@@ -9,10 +9,10 @@ export default function EmailDetails(props) {
   const [message, setMessage] = useState(props.message);
   return (
     <div className='email-details'>
-      <Link className='link' to='/react-email'><span>Back</span></Link>
+      <Link className='link' to='/react-email'><span>🔙</span></Link>
 
       <div className='send-email-form'>
-        <h1>New message to {props.to}</h1>
+        <h1>New email to {props.to}</h1>
         <input onChange={(e) => setFrom(e.target.value)} type='email' name='from' placeholder='From' />
         <input onChange={(e) => setSubject(e.target.value)} type='text' name='subject' placeholder='Subject' />
       <textarea onChange={(e) => setMessage(e.target.value)}  rows='50' cols='21' name='message' placeholder='Message' />

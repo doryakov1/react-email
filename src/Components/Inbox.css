@@ -25,14 +25,14 @@
   margin: 0;
   padding: 0;
   /* width: 100%; */
-  height: calc(150px + 2vh);
-  box-shadow: 1px 1px lightgray;
+  height: calc(90px + 2vh);
+  box-shadow: 1px 1px 1px 1px lightgray;
   /* word-break: break-all; */
 }
 
 .inbox .email:hover {
     transition: 0.5s;
-    box-shadow: 2px 2px 2px 2px darkgray;
+    box-shadow: 3px 3px 3px 3px darkgray;
   }
 .inbox .header-email {
     display: flex;
@@ -45,18 +45,19 @@
 
 .inbox .header-email .email-date {
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     align-items: center;
     width: calc(180px + 2vh);
     margin: 0;
     padding: 0;
     font-size: calc(4px + 2vh);
     color: darkgray;
+    font-weight: bold;
 }
 
 .inbox .header-email .email-from {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
     width: calc(225px + 2vh);
     margin: 0;
@@ -77,7 +78,7 @@
 
 .inbox .buttom-email .email-title{
     display: flex;
-    justify-content: left;
+    justify-content: flex-end;
     align-items: center;
     width: calc(225px + 2vh);
     margin: 0;
@@ -88,11 +89,12 @@
 
 .inbox .buttom-email .email-body{
     display: flex;
-    justify-content: right;
+    justify-content: flex-start;
     align-items: center;
     width: calc(550px + 2vh);
     margin: 0;
     padding: 0;
     font-size: calc(3px + 2vh);
+    font-weight: bold;
     color: darkgrey;
 }
