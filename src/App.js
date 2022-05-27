@@ -48,8 +48,8 @@ function App() {
       dataType: 'jsonp',
       context: $('body'),
       success: function (data) {
-
-        if (data.success == true) {
+      //  console.log(data.success)
+        // if (data.success == true) {
           setEmailAlert('');
           setShowComp(!showComp);
           setTimeout(() => {
@@ -80,10 +80,10 @@ function App() {
             emails[idx].history.unshift(email)
           }
 
-        }
-        else {
-          setEmailAlert('Email could not be sent');
-        }
+        // }
+        // else if(data.success == false) {
+        //   setEmailAlert('Email could not be sent');
+        // }
       },
       error: function (xhr, type) {
         setEmailAlert('Email could not be sent')
