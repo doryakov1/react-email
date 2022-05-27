@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-email/static/css/main.a29ff7de.css",
-    "main.js": "/react-email/static/js/main.f5e343c3.js",
+    "main.js": "/react-email/static/js/main.f1e83e9f.js",
     "static/js/787.d76caa4f.chunk.js": "/react-email/static/js/787.d76caa4f.chunk.js",
     "index.html": "/react-email/index.html",
     "main.a29ff7de.css.map": "/react-email/static/css/main.a29ff7de.css.map",
-    "main.f5e343c3.js.map": "/react-email/static/js/main.f5e343c3.js.map",
+    "main.f1e83e9f.js.map": "/react-email/static/js/main.f1e83e9f.js.map",
     "787.d76caa4f.chunk.js.map": "/react-email/static/js/787.d76caa4f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a29ff7de.css",
-    "static/js/main.f5e343c3.js"
+    "static/js/main.f1e83e9f.js"
   ]
 }
