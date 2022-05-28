@@ -35,7 +35,7 @@ export default function SendEmail(props) {
           <input onChange={(e) => setTo(e.target.value)} type='email' name='to' placeholder='To' />
           <input onChange={(e) => setFrom(e.target.value)} type='email' name='from' placeholder='From' />
           <input onChange={(e) => setSubject(e.target.value)} type='text' name='subject' placeholder='Subject' />
-          <textarea onChange={(e) => setMessage(e.target.value)} rows='4' cols='14' placeholder='Message' />
+          <textarea onChange={(e) => setMessage(e.target.value)} rows='6' cols='14' placeholder='Message' />
           <button onClick={formvalid}>Send</button>
         </div>
       </div>

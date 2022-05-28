@@ -24,7 +24,7 @@
     font-weight: bold;
     margin: 10px;
     padding: 10px;
-    width: 70%;
+    width: 80%;
     font-size: calc(10px + 2vh);
  }
 
@@ -34,10 +34,10 @@
     align-items: center;
     color: rgb(255, 196, 0);
     font-weight: bold;
-    margin: 5px;
-    padding: 5px;
+    margin: 4px;
+    padding: 4px;
     width: 75%;
-    font-size: calc(4px + 2vh);
+    font-size: calc(3px + 2vh);
     word-wrap: break-word;
  }
 
@@ -81,7 +81,7 @@
     align-items: center;
     margin: 10px;
     padding: 10px;
-    width: 80%;
+    width: 90%;
     height: 20px;
     border: none;
     background: whitesmoke;
@@ -94,7 +94,7 @@
     align-items: center;
     margin: 10px;
     padding: 10px;
-    width: 80%;
+    width: 90%;
     resize: none;
     /* height: 20px; */
     border: none;
@@ -112,7 +112,7 @@
     padding: 10px;
     border: none;
     box-shadow: 1px 1px 1px 1px white;
-    width: 70%;
+    width: 80%;
     background: steelblue;
     color: white;
     font-size: calc(6px + 2vh);
@@ -140,7 +140,7 @@
     width: 260px;
     height: 18px;
     cursor: pointer;
-    margin-right: 48px;
+    /* margin-right: 48px; */
 }
 
 
@@ -154,7 +154,7 @@
     z-index: 999;
     width: 275px;
     height: 40px;
-    margin-right: 48px;
+    /* margin-right: 48px; */
     margin-bottom: 10px;
     cursor: pointer;
 

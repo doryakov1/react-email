@@ -24,7 +24,7 @@ export default function Inbox(props) {
         }
     }
     const sliceSubject = (text) => {
-        if(text == undefined) return;
+        if(text == undefined) return 'Subject is empty';
         if (text.length > 15) {
             return text.slice(0, 15) + '...';
         } else {
@@ -32,7 +32,7 @@ export default function Inbox(props) {
         }
     }
     const sliceMessage = (text) => {
-        if(text == undefined) return;
+        if(text == undefined) return 'Message is empty';
         if (text.length > 35) {
             return text.slice(0, 35) + '...';
         } else {
