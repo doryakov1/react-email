@@ -13,7 +13,7 @@
 
 .email-details .link {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
     text-decoration: none;
     padding: 5px;
