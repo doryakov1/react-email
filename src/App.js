@@ -2,26 +2,11 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import $ from 'jquery';
-import Header from './Components/Header';
 import Inbox from './Components/Inbox';
 import EmailDetails from './Components/EmailDetails';
 import SendEmail from './Components/SendEmail';
 ;
 function App() {
-
-  const [emailAlert, setEmailAlert] = useState('')
-  const [showComp, setShowComp] = useState(true)
-
-  const [emails, setEmails] = useState([
-    // { date: '22.4.22', from: 'era@gmail.com', to: 'sdf1sfe@walla.com', subject: 'Heroku sfdgdfgecufdgdgdfrity notification - resetting user account passwords TODAY, May 4, 202', message: 'eroku will say 4, 2022, as mentioned in our previous notification. We recommend that you reset your user account password in advance here and follow the best practices below: ' },
-    // { date: '2.4.22', from: 'era@gmail.com', to: 'sdffdsdfs@walla.com', subject: 'Herokur 33seaaaasa22curiopipiopiopiopty notification - resetting user account passwords TODAY, May 4, 202', message: 'eroku will ractices below: ' },
-    // { date: '12.4.22', from: 'era@gmail.com', to: 's332333dfs@walla.com', subject: 'Herokuds securitpiopoipiopotification - resetting user account passwords TODAY, May 4, 202', message: 'eroku will kjhkhkhkhhjkhjkhuser account passwords today, May 4, 2022, as mentioned in our previous notification. We recommend that you reset your user account password in advance here and follow the best practices below: ' },
-    // { date: '1.4.22', from: 'era@gmail.com', to: '1@walla.com', subject: 'Heroku securityhdfg notification - resetting user account passwords TODAY, May 4, 202', message: 'eroku will start rehjkhgjkghjghioned in our previous notification. We recommend that you reset your user account password in advance here and follow the best practices below: ' },
-    // { date: '3.4.22', from: 'era@gmail.com', to: 'fd@walla.com', subject: 'Heroku secsswords TODAY, May 4, 202', message: 'eroku will startgfh, as mentioned in our previous notification. We recommend that you reset your user account password in advance here and follow the best practices below: ' },
-    // { date: '5.4.22', from: 'era@gmail.com', to: 'sdf@walla.com', subject: 'Heroku security notification - resetting user account passwords TODAY, May 4, 202', message: '' },
-    // { date: '6.4.22', from: 'era@gmail.com', to: 'sdfs@walla.com', subject: '', message: 'erokghfghfghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhfghfgu will start resetting user account passwords today, May 4, 2022, as mentioned in our previous notification. We recommend that you reset your user account password in advance here and follow the best practices below: ' },
-  ]);
-
   const getCreatedAt = () => {
     let newDate = new Date();
     let getTime = newDate.getFullYear() + '-' +
@@ -31,11 +16,91 @@ function App() {
 
     return getTime;
   }
-
+  const [emailAlert, setEmailAlert] = useState('')
+  const [showComp, setShowComp] = useState(true)
+  const [emails, setEmails] = useState([
+    { date: getCreatedAt(), from: 'Email app', to: 'No-reply', subject: 'Hello and wellcome to email app.', message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',history:[{
+      date: getCreatedAt(),
+      from: 'Email app',
+      to: 'No-reply',
+      subject: 'Hello and wellcome to email app, delete this email after read!',
+      message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',
+    }]},{ date: getCreatedAt(), from: 'Email app', to: 'No-reply', subject: 'Hello and wellcome to email app.', message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',history:[{
+      date: getCreatedAt(),
+      from: 'Email app',
+      to: 'No-reply',
+      subject: 'Hello and wellcome to email app, delete this email after read!',
+      message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',
+    }]},{ date: getCreatedAt(), from: 'Email app', to: 'No-reply', subject: 'Hello and wellcome to email app.', message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',history:[{
+      date: getCreatedAt(),
+      from: 'Email app',
+      to: 'No-reply',
+      subject: 'Hello and wellcome to email app, delete this email after read!',
+      message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',
+    }]},{ date: getCreatedAt(), from: 'Email app', to: 'No-reply', subject: 'Hello and wellcome to email app.', message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',history:[{
+      date: getCreatedAt(),
+      from: 'Email app',
+      to: 'No-reply',
+      subject: 'Hello and wellcome to email app, delete this email after read!',
+      message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',
+    }]},{ date: getCreatedAt(), from: 'Email app', to: 'No-reply', subject: 'Hello and wellcome to email app.', message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',history:[{
+      date: getCreatedAt(),
+      from: 'Email app',
+      to: 'No-reply',
+      subject: 'Hello and wellcome to email app, delete this email after read!',
+      message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',
+    }]},{ date: getCreatedAt(), from: 'Email app', to: 'No-reply', subject: 'Hello and wellcome to email app.', message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',history:[{
+      date: getCreatedAt(),
+      from: 'Email app',
+      to: 'No-reply',
+      subject: 'Hello and wellcome to email app, delete this email after read!',
+      message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',
+    }]},{ date: getCreatedAt(), from: 'Email app', to: 'No-reply', subject: 'Hello and wellcome to email app.', message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',history:[{
+      date: getCreatedAt(),
+      from: 'Email app',
+      to: 'No-reply',
+      subject: 'Hello and wellcome to email app, delete this email after read!',
+      message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',
+    }]},{ date: getCreatedAt(), from: 'Email app', to: 'No-reply', subject: 'Hello and wellcome to email app.', message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',history:[{
+      date: getCreatedAt(),
+      from: 'Email app',
+      to: 'No-reply',
+      subject: 'Hello and wellcome to email app, delete this email after read!',
+      message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',
+    }]},{ date: getCreatedAt(), from: 'Email app', to: 'No-reply', subject: 'Hello and wellcome to email app.', message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',history:[{
+      date: getCreatedAt(),
+      from: 'Email app',
+      to: 'No-reply',
+      subject: 'Hello and wellcome to email app, delete this email after read!',
+      message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',
+    }]},{ date: getCreatedAt(), from: 'Email app', to: 'No-reply', subject: 'Hello and wellcome to email app.', message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',history:[{
+      date: getCreatedAt(),
+      from: 'Email app',
+      to: 'No-reply',
+      subject: 'Hello and wellcome to email app, delete this email after read!',
+      message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',
+    }]},{ date: getCreatedAt(), from: 'Email app', to: 'No-reply', subject: 'Hello and wellcome to email app.', message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',history:[{
+      date: getCreatedAt(),
+      from: 'Email app',
+      to: 'No-reply',
+      subject: 'Hello and wellcome to email app, delete this email after read!',
+      message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',
+    }]},{ date: getCreatedAt(), from: 'Email app', to: 'No-reply', subject: 'Hello and wellcome to email app.', message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',history:[{
+      date: getCreatedAt(),
+      from: 'Email app',
+      to: 'No-reply',
+      subject: 'Hello and wellcome to email app, delete this email after read!',
+      message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',
+    }]},{ date: getCreatedAt(), from: 'Email app', to: 'No-reply', subject: 'Hello and wellcome to email app.', message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',history:[{
+      date: getCreatedAt(),
+      from: 'Email app',
+      to: 'No-reply',
+      subject: 'Hello and wellcome to email app, delete this email after read!',
+      message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',
+    }]}
+  ]);
   const sendAddEmail = (to, from, subject, message) => {
     setEmailAlert(<span class="loader"></span>);
-
-    // console.log(from, to, subject, message)
     $.ajax({
       type: 'GET',
       url: "http://completewebdevelopercourse.com/content/9-mobileapps/sendemail.php?callback=response",
@@ -48,7 +113,6 @@ function App() {
       dataType: 'jsonp',
       context: $('body'),
       success:  (data) =>{
-      //  console.log(data.success)
         if (data.success == true) {
           setEmailAlert('');
           setShowComp(!showComp);
@@ -75,7 +139,7 @@ function App() {
           const idx = emails.findIndex(isNameEquel);
 
           if (idx == -1) {
-            setEmails([...emails, email]);
+            setEmails([email ,...emails]);
           }else{
             emails[idx].history.unshift(email)
           }
@@ -98,7 +162,6 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header />
         <Routes>
           <Route path="/react-email" element={<Inbox emails={emails} />} />
           {emails.map((email, idx) => {

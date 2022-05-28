@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Inbox.css';
+import Header from './/Header';
 
 export default function Inbox(props) {
     // const deleteDate = (text) => {
@@ -40,6 +41,7 @@ export default function Inbox(props) {
     }
     return (
         <div className='inbox'>
+            <Header/>
             {props.emails.map((email) => {
                 return (
                     <Link className='link' to={'/react-email/emaildetails' + email.to}>

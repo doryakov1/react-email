@@ -1,4 +1,13 @@
-.Header input {
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 95%;
+}
+
+.header input {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +21,7 @@
     background: whitesmoke;
 }
 
-.Header input::placeholder {
+.header input::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
