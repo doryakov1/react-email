@@ -2,11 +2,11 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import $ from 'jquery';
-import Inbox from './Components/Inbox';
+import HomePage from './Components/HomePage';
 import EmailDetails from './Components/EmailDetails';
-import SendEmail from './Components/SendEmail';
 ;
 function App() {
+
   const getCreatedAt = () => {
     let newDate = new Date();
     let getTime = newDate.getFullYear() + '-' +
@@ -16,15 +16,15 @@ function App() {
 
     return getTime;
   }
-  const [emailAlert, setEmailAlert] = useState('')
-  const [showComp, setShowComp] = useState(true)
+  const [emailAlert, setEmailAlert] = useState('');
+  const [showComp, setShowComp] = useState(true);
   const [emails, setEmails] = useState([
-    { date: getCreatedAt(), from: 'Email app', to: 'No-reply', subject: 'Hello and wellcome to email app.', message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',history:[{
+    { date: getCreatedAt(), from: 'Email app', to: 'No-reply', subject: 'Hello and wellcome to email app.', message: 'Your HomePage is empty, start by sending an email to any address you want, and from any address you would like.',history:[{
       date: getCreatedAt(),
       from: 'Email app',
       to: 'No-reply',
       subject: 'Hello and wellcome to email app, delete this email after read!',
-      message: 'Your inbox is empty, start by sending an email to any address you want, and from any address you would like.',
+      message: 'Your HomePage is empty, start by sending an email to any address you want, and from any address you would like.',
     }]},
   ]);
   const sendAddEmail = (to, from, subject, message) => {
@@ -82,21 +82,16 @@ function App() {
       }
     })
   }
-  const showComponent = () => {
-    if (showComp == true) {
-      return <SendEmail sendAddaEmail={sendAddEmail} emailAlert={emailAlert} />
-    }
-  }
+
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/react-email" element={<Inbox emails={emails} />} />
+          <Route path="/react-email" element={<HomePage emails={emails} sendAddEmail={sendAddEmail} emailAlert={emailAlert} showComp={showComp} />} />
           {emails.map((email, idx) => {
             return (<Route path={"/react-email/emaildetails" + email.to} element={<EmailDetails idx={idx} date={email.date} to={email.to} from={email.from} subject={email.subject} message={email.message} emailHistory={email.history} sendAddaEmail={sendAddEmail} />} />)
           })}
         </Routes>
-        {showComponent()}
       </BrowserRouter>
     </div>
   );

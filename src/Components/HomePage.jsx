@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Inbox.css';
-import Header from './/Header';
+import './HomePage.css';
+import Header from './Header';
+import SendEmail from './SendEmail';
 
-export default function Inbox(props) {
-    // const deleteDate = (text) => {
-    //     if(text == undefined) return;
-    // }
+export default function HomePage(props) {
+    const showComponent = () => {
+        if (props.showComp == true) {
+          return <SendEmail sendAddaEmail={props.sendAddEmail} emailAlert={props.emailAlert}  />
+        }
+      }
     const sliceDate = (text) => {
         if(text == undefined) return;
         if (text.length > 10) {
@@ -40,7 +43,7 @@ export default function Inbox(props) {
         }
     }
     return (
-        <div className='inbox'>
+        <div className='home-page'>
             <Header/>
             {props.emails.map((email) => {
                 return (
@@ -56,6 +59,7 @@ export default function Inbox(props) {
                     </div>
                     </Link>)
             })}
+           {showComponent()}
         </div>
     )
 }
