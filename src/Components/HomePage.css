@@ -10,6 +10,7 @@
     align-items: center;
     flex-direction: column; */
     overflow: hidden;
+    word-wrap: break-word;
     margin: 50px auto;
     padding: 1px;
     font-size: calc(3px + 2vh);
@@ -26,7 +27,7 @@
     margin: 0;
     padding: 0;
     /* width: 100%; */
-    height: calc(80px + 2vh);
+    height: calc(105px + 2vh);
     box-shadow: 1px 1px 1px 1px lightgray;
     /* word-break: break-all; */
 }
@@ -71,9 +72,9 @@
 
 .home-page  .buttom-email {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
     margin: 0;
     padding: 0;
 }
@@ -82,7 +83,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: calc(225px + 2vh);
+    width: calc(875px + 2vh);
     margin: 0;
     padding: 0;
     font-size: calc(3px + 2vh);
@@ -91,9 +92,9 @@
 
 .home-page  .buttom-email .email-body {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-    width: calc(550px + 2vh);
+    width: calc(1375px + 2vh);
     margin: 0;
     padding: 0;
     font-size: calc(3px + 2vh);

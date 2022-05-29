@@ -19,8 +19,19 @@
     padding: 2px;
     margin: 2px;
     font-size: calc(15px + 2vh);
-    color: rgba(0, 0, 0, 0.763);
+    
 }
+.email-details .link span{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    padding: 2px;
+    margin: 2px;
+    font-size: calc(15px + 2vh);
+    color: steelblue;
+}
+
 
 .email-details .email-header {
     display: flex;
@@ -154,7 +165,7 @@
     flex-direction: column;
     justify-content: space-around;
     margin:  10px;
-    padding: 0;
+    padding: 20px;
     /* margin-bottom: 10px; */
     /* width: 100%; */
     height: calc(175px + 2vh);
@@ -251,7 +262,10 @@
     font-weight: bold;
     font-size: calc(10px + 2vh);
     cursor: pointer;
-    color: darkgray;
+    color: steelblue;
+    width: calc(25px + 2vh);
+    height: calc(15px + 2vh);
+    border: 1px solid steelblue;
 }
 
 .email-details .buttons-email .button-delete{
@@ -259,6 +273,10 @@
     justify-content: center;
     align-items: center;
     font-size: calc(6px + 2vh); 
+    color: lightskyblue;
+    width: calc(25px + 2vh);
+    height: calc(15px + 2vh);
+    border: 1px solid lightskyblue;
 }
 
 .email-details .buttons-email .button-star{
@@ -271,6 +289,7 @@
 }
  
 .email-details .buttons-email button:hover{
-   color: black;
+   background: lightskyblue;
+   color: white;
 }
  

@@ -27,17 +27,17 @@ export default function HomePage(props) {
         }
     }
     const sliceSubject = (text) => {
-        if(text == undefined) return 'Subject is empty';
-        if (text.length > 15) {
-            return text.slice(0, 15) + '...';
+        if(text == undefined || text.length == 0) return 'Subject is empty';
+        if (text.length > 50) {
+            return text.slice(0, 50) + '...';
         } else {
             return text;
         }
     }
     const sliceMessage = (text) => {
-        if(text == undefined) return 'Message is empty';
-        if (text.length > 35) {
-            return text.slice(0, 35) + '...';
+        if(text == undefined || text.length == 0) return 'Message is empty';
+        if (text.length > 100) {
+            return text.slice(0, 100) + '...';
         } else {
             return text;
         }

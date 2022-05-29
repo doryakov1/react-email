@@ -3,6 +3,7 @@ import './EmailDetails.css';
 import { Link } from 'react-router-dom';
 import validator from 'validator';
 import { Add , Erase } from 'grommet-icons';
+import { Confirm } from 'react-st-modal';
 
 export default function EmailDetails(props) {
   const [openModal, setOpenModal] = useState(false);
@@ -25,8 +26,19 @@ export default function EmailDetails(props) {
       props.sendAddaEmail(props.to, from, subject, message);
     }
   }
+  const onClick = async () => {
+    const isConfirm = await Confirm(
+      'You cannot undo this action',
+      'Are you sure you want to delete the entry?'
+    );
+  
+    if (isConfirm) {
+      props.deleteEmail(props.idx);
+    }
+  };
   return (
     <div className='email-details'>
+      
       <Link className='link' to='/react-email'><span>🔙</span></Link>
       {formModal()}
       {props.emailHistory.map((email) => {
@@ -43,7 +55,7 @@ export default function EmailDetails(props) {
       })}
       <div className='buttons-email'>
           <button onClick={()=>setOpenModal(!openModal)}>{<Add/>}</button>
-          <Link to={'/react-email'}><button onClick={()=>props.deleteEmail(props.idx)} className='button-delete'>{<Erase/>}</button></Link>
+          <Link to={'/react-email'}><button onClick={onClick} className='button-delete'>{<Erase/>}</button></Link>
           {/* <button className='button-star'>{<Star/>}</button> */}
           {/* <button><Trash/></button> */}
       </div>
