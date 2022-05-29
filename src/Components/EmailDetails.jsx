@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './EmailDetails.css';
 import { Link } from 'react-router-dom';
 import validator from 'validator';
+import { Add , Erase } from 'grommet-icons';
 
 export default function EmailDetails(props) {
-  const [starChar , setStarChar] = useState('☆')
   const [openModal, setOpenModal] = useState(false);
   const [from, setFrom] = useState('');
   const [subject, setSubject] = useState('');
@@ -42,16 +42,10 @@ export default function EmailDetails(props) {
         </div>
       })}
       <div className='buttons-email'>
-          <button onClick={()=>setOpenModal(!openModal)}>➕</button>
-          <button className='button-delete'>❌</button>
-          <button onClick={()=>{
-            if(starChar == '☆'){
-              setStarChar('★')
-            }else{
-              setStarChar('☆')
-            }
-          }} className='button-star'>{starChar}</button>
-          <button>🗑️</button>
+          <button onClick={()=>setOpenModal(!openModal)}>{<Add/>}</button>
+          <Link to={'/react-email'}><button onClick={()=>props.deleteEmail(props.idx)} className='button-delete'>{<Erase/>}</button></Link>
+          {/* <button className='button-star'>{<Star/>}</button> */}
+          {/* <button><Trash/></button> */}
       </div>
     </div>
   )

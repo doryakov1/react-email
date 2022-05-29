@@ -82,14 +82,36 @@ function App() {
       }
     })
   }
+  const deleteEmail=(index)=>{
+    let emailsCopy = [...emails];
+    emailsCopy.splice(index, 1);
+    setEmails([...emailsCopy]);
+  }
+  const filterEmails = (keySearch) => {
+    if (keySearch.length == 0 || emails.length == 0) {
+      setEmails([
+        { date: getCreatedAt(), from: 'Email app', to: 'No-reply', subject: 'Hello and wellcome to email app.', message: 'Your HomePage is empty, start by sending an email to any address you want, and from any address you would like.',history:[{
+          date: getCreatedAt(),
+          from: 'Email app',
+          to: 'No-reply',
+          subject: 'Hello and wellcome to email app, delete this email after read!',
+          message: 'Your HomePage is empty, start by sending an email to any address you want, and from any address you would like.',
+        }]},
+      ]);
+      return;
+    }
+    let emailsCopy = [...emails];
+    const result = emailsCopy.filter(email => email['to'].includes(keySearch));
+    setEmails([...result]);
+  }
 
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/react-email" element={<HomePage emails={emails} sendAddEmail={sendAddEmail} emailAlert={emailAlert} showComp={showComp} />} />
+          <Route path="/react-email" element={<HomePage emails={emails} sendAddEmail={sendAddEmail}  filterEmails={filterEmails} emailAlert={emailAlert} showComp={showComp} />} />
           {emails.map((email, idx) => {
-            return (<Route path={"/react-email/emaildetails" + email.to} element={<EmailDetails idx={idx} date={email.date} to={email.to} from={email.from} subject={email.subject} message={email.message} emailHistory={email.history} sendAddaEmail={sendAddEmail} />} />)
+            return (<Route path={"/react-email/emaildetails" + email.to} element={<EmailDetails idx={idx} date={email.date} to={email.to} from={email.from} subject={email.subject} message={email.message} emailHistory={email.history} sendAddaEmail={sendAddEmail} deleteEmail={deleteEmail} />} />)
           })}
         </Routes>
       </BrowserRouter>

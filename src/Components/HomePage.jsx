@@ -44,7 +44,7 @@ export default function HomePage(props) {
     }
     return (
         <div className='home-page'>
-            <Header/>
+            <Header filterEmails ={props.filterEmails}/>
             {props.emails.map((email) => {
                 return (
                     <Link className='link' to={'/react-email/emaildetails' + email.to}>
