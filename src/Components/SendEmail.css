@@ -135,7 +135,7 @@
     position:absolute;
     bottom: 0;
     left: 0;
-    width: 125px;
+    width: 75px;
     height: 18px;
     cursor: pointer;
 }
@@ -150,7 +150,7 @@
     bottom: 0;
     left: 0;
     z-index: 1;
-    width: 150px;
+    width: 100px;
     height: 45px;
     cursor: pointer;
 
@@ -159,7 +159,7 @@
 
 .send-email #checkbox-button:checked~.send-email-form-postion{
     transition: 0.4s;
-    bottom: -50px;
+    bottom: -40px;
     left: -10px;
 }
 

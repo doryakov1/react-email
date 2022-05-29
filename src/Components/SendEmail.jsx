@@ -11,10 +11,12 @@ export default function SendEmail(props) {
   const [alert, setAlert] = useState();
   const formvalid = () => {
     if (!(validator.isEmail(to) && validator.isEmail(from))) {
-      setAlert(<span className='email-alert'>Emails are not valid</span>)
+      setAlert(<span className='email-alert'>Invalid emails addresses</span>)
     }
-    else {
-      setAlert('')
+    else if(subject.length == 0 && message.length == 0){
+      setAlert(<span className='email-alert'>Please fill the form</span>)
+    }else{
+      setAlert()
       props.sendAddaEmail(to, from, subject, message);
     }
   }
