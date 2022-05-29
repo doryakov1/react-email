@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './EmailDetails.css';
-import { Link } from 'react-router-dom';
+import { useNavigate ,Link} from 'react-router-dom';
 import validator from 'validator';
 import { Add , Erase } from 'grommet-icons';
 import { Confirm } from 'react-st-modal';
 
 export default function EmailDetails(props) {
+  const navigate = useNavigate();
   const [openModal, setOpenModal] = useState(false);
   const [from, setFrom] = useState('');
   const [subject, setSubject] = useState('');
@@ -17,11 +18,11 @@ export default function EmailDetails(props) {
         <input onChange={(e) => setFrom(e.target.value)} type='email' name='from' placeholder='From' />
         <input onChange={(e) => setSubject(e.target.value)} type='text' name='subject' placeholder='Subject' />
         <textarea onChange={(e) => setMessage(e.target.value)} rows='50' cols='21' name='message' placeholder='Message' />
-        <button onClick={formvalid}>Send</button>
+        <button onClick={formValid}>Send</button>
       </div>)
     }
   }
-  const formvalid = () => {
+  const formValid = () => {
     if (validator.isEmail(from) && validator.isEmail(props.to)) {
       props.sendAddaEmail(props.to, from, subject, message);
     }
@@ -34,6 +35,7 @@ export default function EmailDetails(props) {
   
     if (isConfirm) {
       props.deleteEmail(props.idx);
+      navigate('/react-email');
     }
   };
   return (
@@ -55,7 +57,7 @@ export default function EmailDetails(props) {
       })}
       <div className='buttons-email'>
           <button onClick={()=>setOpenModal(!openModal)}>{<Add/>}</button>
-          <Link to={'/react-email'}><button onClick={onClick} className='button-delete'>{<Erase/>}</button></Link>
+          <button onClick={onClick} className='button-delete'>{<Erase/>}</button>
           {/* <button className='button-star'>{<Star/>}</button> */}
           {/* <button><Trash/></button> */}
       </div>
