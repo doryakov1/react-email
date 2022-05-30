@@ -3,8 +3,8 @@
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 5px;
-  margin: 5px;
+  padding: 0;
+  margin: 0;
   font-size: calc(5px + 2vh);
   overflow: hidden;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;

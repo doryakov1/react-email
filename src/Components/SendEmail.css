@@ -44,7 +44,7 @@
 
 
 .send-email .send-email-form-postion{
-    transition: 0.4s;
+    transition: 0.3s;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -157,7 +157,7 @@
 }
 
 .send-email #checkbox-button:checked~.send-email-form-postion{
-    transition: 0.4s;
+    transition: 0.3s;
     bottom: -40px;
     left: -10px;
 }
