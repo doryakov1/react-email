@@ -29,9 +29,9 @@
     margin-top: 20px;
     padding: 10px;
     /* width: 100%; */
-    height: calc(85px + 2vh);
+    height: calc(115px + 2vh);
     border-bottom: 1px solid whitesmoke;
-    /* word-break: break-all; */
+    word-break: break-all;
 }
 
 .home-page  .email:hover {
@@ -52,7 +52,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: calc(180px + 2vh);
+    /* width: calc(180px + 2vh); */
     margin: 0;
     padding: 0;
     font-size: calc(4px + 2vh);
@@ -64,7 +64,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: calc(225px + 2vh);
+    /* width: calc(225px + 2vh); */
     margin: 0;
     padding: 0;
     font-size: calc(5px + 2vh);
@@ -85,7 +85,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: calc(875px + 2vh);
+    /* width: calc(875px + 2vh); */
     margin: 0;
     padding: 0;
     font-size: calc(3px + 2vh);
@@ -96,7 +96,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: calc(1375px + 2vh);
+    /* width: calc(1375px + 2vh); */
     margin: 0;
     padding: 0;
     font-size: calc(3px + 2vh);
