@@ -12,8 +12,8 @@ export default function HomePage(props) {
       }
     const sliceDate = (text) => {
         if(text == undefined) return;
-        if (text.length > 10) {
-            return text.slice(0, 10);
+        if (text.length > 9) {
+            return text.slice(0, 9);
         } else {
             return text;
         }
@@ -36,8 +36,8 @@ export default function HomePage(props) {
     }
     const sliceMessage = (text) => {
         if(text == undefined || text.length == 0) return 'Message is empty';
-        if (text.length > 100) {
-            return text.slice(0, 100) + '...';
+        if (text.length > 90) {
+            return text.slice(0, 90) + '...';
         } else {
             return text;
         }
@@ -50,7 +50,7 @@ export default function HomePage(props) {
                     <Link className='link' to={'/react-email/emaildetails' + email.to}>
                          <div className='email'>
                         <div className='header-email'>
-                            <span className='email-date'>{sliceDate(email.date)}</span>
+                            <span className='email-date'>{email.date}</span>
                             <span className='email-from'>{sliceFrom(email.to)}</span></div>
                         <div className='buttom-email'>
                             <span className='email-title'>{sliceSubject(email.subject)}</span>

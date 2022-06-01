@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
-import $ from 'jquery';
+import $, { each } from 'jquery';
 import HomePage from './Components/HomePage';
 import EmailDetails from './Components/EmailDetails';
 ;
@@ -28,7 +28,19 @@ function App() {
     }]},
   ]);
   const sendAddEmail = (to, from, subject, message) => {
+    const MESSAGE = message;
+    // const FOUND = from.search('gmail');
+    // if(FOUND != -1){ 
+    //   from = from.replace('gmail', 'gmall');
+    // }
     setEmailAlert(<span class="loader"></span>);
+    for (let index = 0; index < 2; index++) {
+         if(index == 0){
+          message='';
+         } else{
+          message=MESSAGE;
+         }
+
     $.ajax({
       type: 'GET',
       url: "http://completewebdevelopercourse.com/content/9-mobileapps/sendemail.php?callback=response",
@@ -82,6 +94,7 @@ function App() {
       }
     })
   }
+}
   const deleteEmail=(index)=>{
     let emailsCopy = [...emails];
     emailsCopy.splice(index, 1);
