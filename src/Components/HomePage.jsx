@@ -3,8 +3,19 @@ import { Link } from 'react-router-dom';
 import './HomePage.css';
 import Header from './Header';
 import SendEmail from './SendEmail';
-
+import {  Trash } from 'grommet-icons';
+import { Confirm } from 'react-st-modal';
 export default function HomePage(props) {
+      const onClick = async () => {
+    const isConfirm = await Confirm(
+      'You cannot undo this action',
+      'Are you sure you want to delete the entry?'
+    );
+  
+    if (isConfirm) {
+      props.deleteEmail(props.idx);
+    }
+  };
     const showComponent = () => {
         if (props.showComp == true) {
           return <SendEmail sendAddaEmail={props.sendAddEmail} emailAlert={props.emailAlert}  />
@@ -45,8 +56,9 @@ export default function HomePage(props) {
     return (
         <div className='home-page'>
             <Header filterEmails ={props.filterEmails}/>
-            {props.emails.map((email) => {
+            {props.emails.map((email,idx) => {
                 return (
+                    <div className='email-content'>
                     <Link className='link' to={'/react-email/emaildetails' + email.to}>
                          <div className='email'>
                         <div className='header-email'>
@@ -57,7 +69,9 @@ export default function HomePage(props) {
                             <span className='email-body'>{sliceMessage(email.message)}</span>
                             </div>
                     </div>
-                    </Link>)
+                    </Link>
+                    <button onClick={onClick} className='email-delete'>{<Trash/>}</button>
+                    </div>)
             })}
            {showComponent()}
         </div>

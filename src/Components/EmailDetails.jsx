@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './EmailDetails.css';
 import { useNavigate ,Link} from 'react-router-dom';
 import validator from 'validator';
-import { Add , Erase } from 'grommet-icons';
+import { Add , Trash } from 'grommet-icons';
 import { Confirm } from 'react-st-modal';
 
 export default function EmailDetails(props) {
@@ -57,7 +57,7 @@ export default function EmailDetails(props) {
       })}
       <div className='buttons-email'>
           <button onClick={()=>setOpenModal(!openModal)}>{<Add/>}</button>
-          <button onClick={onClick} className='button-delete'>{<Erase/>}</button>
+          <button onClick={onClick} className='button-delete'>{<Trash/>}</button>
           {/* <button className='button-star'>{<Star/>}</button> */}
           {/* <button><Trash/></button> */}
       </div>

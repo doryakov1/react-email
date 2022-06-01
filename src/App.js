@@ -122,7 +122,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/react-email" element={<HomePage emails={emails} sendAddEmail={sendAddEmail}  filterEmails={filterEmails} emailAlert={emailAlert} showComp={showComp} />} />
+          <Route path="/react-email" element={<HomePage emails={emails} sendAddEmail={sendAddEmail}  filterEmails={filterEmails} emailAlert={emailAlert} showComp={showComp} deleteEmail={deleteEmail}/>} />
           {emails.map((email, idx) => {
             return (<Route path={"/react-email/emaildetails" + email.to} element={<EmailDetails idx={idx} date={email.date} to={email.to} from={email.from} subject={email.subject} message={email.message} emailHistory={email.history} sendAddaEmail={sendAddEmail} deleteEmail={deleteEmail} />} />)
           })}
