@@ -262,13 +262,13 @@
     font-weight: bold;
     font-size: calc(10px + 2vh);
     cursor: pointer;
-    color: steelblue;
+    color: lightskyblue;
     width: calc(25px + 2vh);
     height: calc(15px + 2vh);
-    border: 1px solid steelblue;
+    border: 1px solid lightskyblue;
 }
 
-.email-details .buttons-email .button-delete{
+/* .email-details .buttons-email .button-delete{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -277,7 +277,7 @@
     width: calc(25px + 2vh);
     height: calc(15px + 2vh);
     border: 1px solid lightskyblue;
-}
+} */
 
 .email-details .buttons-email .button-star{
     display: flex;

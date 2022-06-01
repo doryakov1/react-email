@@ -58,7 +58,6 @@ export default function HomePage(props) {
             <Header filterEmails ={props.filterEmails}/>
             {props.emails.map((email,idx) => {
                 return (
-                    <div className='email-content'>
                     <Link className='link' to={'/react-email/emaildetails' + email.to}>
                          <div className='email'>
                         <div className='header-email'>
@@ -70,8 +69,7 @@ export default function HomePage(props) {
                             </div>
                     </div>
                     </Link>
-                    <button onClick={onClick} className='email-delete'>{<Trash/>}</button>
-                    </div>)
+                    )
             })}
            {showComponent()}
         </div>

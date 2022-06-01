@@ -27,7 +27,7 @@ function App() {
       message: 'Your HomePage is empty, start by sending an email to any address you want, and from any address you would like.',
     }]},
   ]);
-  const sendAddEmail = (to, from, subject, message) => {
+  const sendAddEmail = async(to, from, subject, message) => {
     const MESSAGE = message;
     // const FOUND = from.search('gmail');
     // if(FOUND != -1){ 
@@ -41,7 +41,7 @@ function App() {
           message=MESSAGE;
          }
 
-    $.ajax({
+  await  $.ajax({
       type: 'GET',
       url: "http://completewebdevelopercourse.com/content/9-mobileapps/sendemail.php?callback=response",
       data: {
