@@ -11,22 +11,32 @@ export default function EmailDetails(props) {
   const [from, setFrom] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const [alert, setAlert] = useState();
+  const formvalid = () => {
+    if (!(validator.isEmail(from))) {
+      setAlert(<span className='email-alert'>Invalid email address</span>)
+    }
+    else if(subject.length == 0 && message.length == 0){
+      setAlert(<span className='email-alert'>Please fill the form</span>)
+    }else{
+      setAlert()
+      props.sendAddaEmail(props.to , from, subject, message);
+    }
+  }
   const formModal = () => {
     if (openModal == true) {
       return (<div className='send-email-form'>
         <h1>New email to {props.to}</h1>
+        <span className='email-alert'>{props.emailAlert}</span>
+        {alert}
         <input onChange={(e) => setFrom(e.target.value)} type='email' name='from' placeholder='From' />
         <input onChange={(e) => setSubject(e.target.value)} type='text' name='subject' placeholder='Subject' />
         <textarea onChange={(e) => setMessage(e.target.value)} rows='50' cols='21' name='message' placeholder='Message' />
-        <button onClick={formValid}>Send</button>
+        <button onClick={formvalid}>Send</button>
       </div>)
     }
   }
-  const formValid = () => {
-    if (validator.isEmail(from) && validator.isEmail(props.to)) {
-      props.sendAddaEmail(props.to, from, subject, message);
-    }
-  }
+ 
   const onClick = async () => {
     const isConfirm = await Confirm(
       'You cannot undo this action',

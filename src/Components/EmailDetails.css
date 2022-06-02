@@ -109,6 +109,20 @@
     word-break: break-all;
 }
 
+
+.email-details .send-email-form .email-alert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 196, 0);
+    font-weight: bold;
+    margin: 1px;
+    padding: 1px;
+    width: 75%;
+    font-size: calc(3px + 2vh);
+    word-wrap: break-word;
+ }
+
 .email-details .send-email-form input {
     display: flex;
     justify-content: left;

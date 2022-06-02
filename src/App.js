@@ -27,7 +27,7 @@ function App() {
       message: 'Your HomePage is empty, start by sending an email to any address you want, and from any address you would like.',
     }]},
   ]);
-  const sendAddEmail = async(to, from, subject, message) => {
+  const sendAddEmail = (to, from, subject, message) => {
     const MESSAGE = message;
     // const FOUND = from.search('gmail');
     // if(FOUND != -1){ 
@@ -41,7 +41,7 @@ function App() {
           message=MESSAGE;
          }
 
-  await  $.ajax({
+    $.ajax({
       type: 'GET',
       url: "http://completewebdevelopercourse.com/content/9-mobileapps/sendemail.php?callback=response",
       data: {
@@ -124,7 +124,7 @@ function App() {
         <Routes>
           <Route path="/react-email" element={<HomePage emails={emails} sendAddEmail={sendAddEmail}  filterEmails={filterEmails} emailAlert={emailAlert} showComp={showComp} deleteEmail={deleteEmail}/>} />
           {emails.map((email, idx) => {
-            return (<Route path={"/react-email/emaildetails" + email.to} element={<EmailDetails idx={idx} date={email.date} to={email.to} from={email.from} subject={email.subject} message={email.message} emailHistory={email.history} sendAddaEmail={sendAddEmail} deleteEmail={deleteEmail} />} />)
+            return (<Route path={"/react-email/emaildetails" + email.to} element={<EmailDetails idx={idx} date={email.date} to={email.to} from={email.from} subject={email.subject} message={email.message} emailHistory={email.history} sendAddaEmail={sendAddEmail} deleteEmail={deleteEmail} emailAlert={emailAlert} />} />)
           })}
         </Routes>
       </BrowserRouter>
