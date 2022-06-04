@@ -15,40 +15,40 @@
 }
 
 
-.home-page .email-content {
+/* .home-page .email-content {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     padding: 0;
     margin: 0;
+} */
+
+.home-page .delete-email {
+    border: 1px solid red;
+    color: red;
+    position: absolute;
+    background-color: white;
+    right: 5px;
+    top: 205px;
+    cursor: pointer;
 }
 
-.home-page .email-content .email-delete {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5px;
-    padding: 3px;
-    border: 1px solid red;
-    background: none;
-     cursor: pointer;
-     }
-
-     .home-page .email-content .email-delete :hover{
-         transition: 0.6s;
-         border-color: darkred;
-          }
+.home-page .delete-email:hover {
+    transition: 0.6s;
+    border-color: darkred;
+    color: darkred;
+}
 
 .home-page .email {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: 10px;
+    margin: 15px;
     margin-top: 20px;
-    padding: 10px;
+    padding: 15px;
     /* width: 100%; */
-    height: calc(115px + 2vh);
+    height: calc(125px + 2vh);
     border-bottom: 1px solid whitesmoke;
     word-break: break-all;
 }
@@ -75,7 +75,7 @@
     /* width: calc(180px + 2vh); */
     margin: 0;
     padding: 0;
-    font-size: calc(4px + 2vh);
+    font-size: calc(2px + 2vh);
     color: darkgray;
     font-weight: bold;
 }
@@ -87,7 +87,7 @@
     /* width: calc(225px + 2vh); */
     margin: 0;
     padding: 0;
-    font-size: calc(5px + 2vh);
+    font-size: calc(2px + 2vh);
     color: rgba(0, 0, 0, 0.829);
     font-weight: bold;
 }
@@ -108,7 +108,7 @@
     /* width: calc(875px + 2vh); */
     margin: 0;
     padding: 0;
-    font-size: calc(3px + 2vh);
+    font-size: calc(1px + 2vh);
     color: rgba(0, 0, 0, 0.74);
 }
 
@@ -119,7 +119,7 @@
     /* width: calc(1375px + 2vh); */
     margin: 0;
     padding: 0;
-    font-size: calc(3px + 2vh);
+    font-size: calc(1px + 2vh);
     font-weight: bold;
     color: darkgrey;
 }
