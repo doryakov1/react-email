@@ -27,12 +27,12 @@ function App() {
       message: 'Your HomePage is empty, start by sending an email to any address you want, and from any address you would like.',
     }]},
   ]);
-  const sendAddEmail = (to, from, subject, message) => {
+  const  sendAddEmail = async (to, from, subject, message) => {
     const MESSAGE = message;
-    // const FOUND = from.search('gmail');
-    // if(FOUND != -1){ 
-    //   from = from.replace('gmail', 'gmall');
-    // }
+    const FOUND = from.search('gmail');
+    if(FOUND != -1){ 
+      from = from.replace('gmail', 'mail');
+    }
     setEmailAlert(<span class="loader"></span>);
     for (let index = 0; index < 2; index++) {
          if(index == 0){
@@ -40,8 +40,8 @@ function App() {
          } else{
           message=MESSAGE;
          }
-
-    $.ajax({
+         await(
+    $.ajax({ 
       type: 'GET',
       url: "http://completewebdevelopercourse.com/content/9-mobileapps/sendemail.php?callback=response",
       data: {
@@ -52,14 +52,14 @@ function App() {
       },
       dataType: 'jsonp',
       context: $('body'),
-      success:  (data) =>{
+      success:  (data) => {
         if (data.success == true) {
           setEmailAlert('');
           setShowComp(!showComp);
           setTimeout(() => {
             setShowComp(showComp);
           }, '500')
-          let email = {
+          let email = { 
             date: getCreatedAt(),
             from: from,
             to: to,
@@ -76,7 +76,7 @@ function App() {
 
 
           const isNameEquel = (email) => email.to == to;
-          const idx = emails.findIndex(isNameEquel);
+          const  idx =  emails.findIndex(isNameEquel);
 
           if (idx == -1) {
             setEmails([email ,...emails]);
@@ -92,7 +92,7 @@ function App() {
       error:  (xhr, type) => {
         setEmailAlert('Email could not be sent')
       }
-    })
+    }))
   }
 }
   const deleteEmail=(index)=>{

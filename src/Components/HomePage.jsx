@@ -20,14 +20,6 @@ export default function HomePage(props) {
           return <SendEmail sendAddaEmail={props.sendAddEmail} emailAlert={props.emailAlert}  />
         }
       }
-    const sliceDate = (text) => {
-        if(text == undefined) return;
-        if (text.length > 9) {
-            return text.slice(0, 9);
-        } else {
-            return text;
-        }
-    }
     const sliceFrom = (text) => {
         if(text == undefined) return;
         if (text.length > 15) {
