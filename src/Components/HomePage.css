@@ -48,7 +48,7 @@
     margin-top: 20px;
     padding: 15px;
     /* width: 100%; */
-    height: calc(125px + 2vh);
+    height: calc(115px + 2vh);
     border-bottom: 1px solid whitesmoke;
     word-break: break-all;
 }
@@ -108,7 +108,7 @@
     /* width: calc(875px + 2vh); */
     margin: 0;
     padding: 0;
-    font-size: calc(1px + 2vh);
+    font-size: calc(2px + 2vh);
     color: rgba(0, 0, 0, 0.74);
 }
 
