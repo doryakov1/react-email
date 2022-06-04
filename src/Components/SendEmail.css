@@ -10,11 +10,9 @@
     padding: 10px;
     background: none;
     width: 100%;
-    /* height: calc(50px + 2vh); */
     font-size: calc(7px + 2vh);
     border: none;
     border-radius: 5px;
-    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
 }
 
 .send-email h1{
@@ -62,12 +60,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* margin: 15px;
-    padding: 15px; */
-    /* width: calc(250px + 2vh); */
-    /* height: 100%; */
-    /* min-height: 60vh; */
-    /* background: whitesmoke; */
     font-size: calc(6px + 2vh);
     background: rgb(255, 255, 255);
     border-radius: 50px;
@@ -95,7 +87,6 @@
     padding: 10px;
     width: 90%;
     resize: none;
-    /* height: 20px; */
     border: none;
     background: whitesmoke;
     font-size: calc(6px + 2vh);

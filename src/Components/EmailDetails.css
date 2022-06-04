@@ -1,13 +1,8 @@
 .email-details {
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
     padding: 0;
     margin: 0;
     width: 100%;
     height: 100%;
-    /* min-height: 100vh; */
     font-size: calc(9px + 2vh);
 }
 
@@ -63,12 +58,7 @@
     flex-direction: column;
     padding: 10px;
     margin: 10px;
-    /* position: absolute;
-    right: 50px;
-    top: 200px; */
-    font-size: calc(9px + 2vh);
-    /* font-weight: bold; */
-}
+    font-size: calc(9px + 2vh);}
 
 .email-details .email-title {
     display: flex;
@@ -179,13 +169,8 @@
     flex-direction: column;
     justify-content: space-around;
     margin:  10px;
-    /* padding: 20px; */
-    /* margin-bottom: 10px; */
-    /* width: 100%; */
     height: calc(270px + 2vh);
-    border-top: 1px solid black;
-    /* word-break: break-all; */
-}
+    border-top: 1px solid black;}
 
 
 .email-details .header-email {
@@ -282,16 +267,6 @@
     border: 1px solid lightskyblue;
 }
 
-/* .email-details .buttons-email .button-delete{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: calc(6px + 2vh); 
-    color: lightskyblue;
-    width: calc(25px + 2vh);
-    height: calc(15px + 2vh);
-    border: 1px solid lightskyblue;
-} */
 
 .email-details .buttons-email .button-star{
     display: flex;

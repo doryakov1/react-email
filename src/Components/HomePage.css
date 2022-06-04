@@ -7,22 +7,12 @@
 .home-page {
     overflow: hidden;
     word-wrap: break-word;
-    margin: 50px auto;
+    margin: 55px auto;
     padding: 1px;
     font-size: calc(3px + 2vh);
     width: 100%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
-
-/* .home-page .email-content {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-} */
 
 .home-page .delete-email {
     border: 1px solid red;
@@ -47,7 +37,6 @@
     margin: 15px;
     margin-top: 20px;
     padding: 15px;
-    /* width: 100%; */
     height: calc(115px + 2vh);
     border-bottom: 1px solid whitesmoke;
     word-break: break-all;
@@ -72,10 +61,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* width: calc(180px + 2vh); */
     margin: 0;
     padding: 0;
-    font-size: calc(2px + 2vh);
+    font-size: calc(4px + 2vh);
     color: darkgray;
     font-weight: bold;
 }
@@ -84,10 +72,9 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    /* width: calc(225px + 2vh); */
     margin: 0;
     padding: 0;
-    font-size: calc(2px + 2vh);
+    font-size: calc(4px + 2vh);
     color: rgba(0, 0, 0, 0.829);
     font-weight: bold;
 }
@@ -105,10 +92,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* width: calc(875px + 2vh); */
     margin: 0;
     padding: 0;
-    font-size: calc(2px + 2vh);
+    font-size: calc(3px + 2vh);
     color: rgba(0, 0, 0, 0.74);
 }
 
@@ -116,10 +102,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* width: calc(1375px + 2vh); */
     margin: 0;
     padding: 0;
-    font-size: calc(1px + 2vh);
+    font-size: calc(2px + 2vh);
     font-weight: bold;
     color: darkgrey;
 }

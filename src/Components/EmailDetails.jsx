@@ -68,8 +68,6 @@ export default function EmailDetails(props) {
       <div className='buttons-email'>
           <button onClick={()=>setOpenModal(!openModal)}>{<Add/>}</button>
           <button onClick={onClick} className='button-delete'>{<Trash/>}</button>
-          {/* <button className='button-star'>{<Star/>}</button> */}
-          {/* <button><Trash/></button> */}
       </div>
     </div>
   )
