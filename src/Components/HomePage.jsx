@@ -39,7 +39,7 @@ export default function HomePage(props) {
             {props.emails.map((email,idx) => {
                 return (
                     <div>
-                    <button className='delete-email' onClick={()=>{props.deleteEmail(idx)}}>Delete</button>
+                    
                     <Link className='link' to={'/react-email/emaildetails' + email.to}>
                          <div className='email'>
                         <div className='header-email'>
@@ -51,6 +51,7 @@ export default function HomePage(props) {
                             </div>
                     </div>
                     </Link>
+                    <button className='delete-email' onClick={()=>{props.deleteEmail(idx)}}>Delete</button>
                     </div>
                     )
             })}

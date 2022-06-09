@@ -17,10 +17,9 @@
 .home-page .delete-email {
     border: 1px solid red;
     color: red;
-    position: absolute;
+    position: relative;
     background-color: white;
-    right: 5px;
-    top: 205px;
+    left:calc(100% - 60px);
     cursor: pointer;
 }
 
